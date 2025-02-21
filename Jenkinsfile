@@ -20,10 +20,11 @@ pipeline {
                 # sudo source /home/team10/miniconda3/bin/activate mlip-lab
 
                 # Activate the conda environment
-                conda activate mlip-lab
+                # conda activate mlip-lab
 
                 # Run pytest
-                pytest
+                # pytest
+                /home/team10/miniconda3/bin/conda run -n mlip-lab pytest
 
                 echo 'pytest run completed'
                 exit 1 #comment this line after implementing Jenkinsfile
