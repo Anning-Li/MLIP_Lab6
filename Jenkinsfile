@@ -15,26 +15,23 @@ pipeline {
                 sh '''#!/bin/bash
                 echo 'Test Step: We run testing tool like pytest here'
 
-                # TODO fill out the path to conda here
-                # sudo /PATH/TO/CONDA init
-                # sudo /home/team10/miniconda3/envs/mlip-lab init
-                sudo source /home/team10/miniconda3/etc/profile.d/conda.sh 
+                # Initialize conda in a non-interactive shell
+                eval "$(/home/team10/miniconda3/bin/conda shell.bash hook)"
+
+                # Activate the conda environment
                 conda activate mlip-lab
 
-                # TODO Complete the command to run pytest
-                # sudo /PATH/TO/CONDA run -n <Envinronment Name> <Command you want to run>
-                # sudo /home/team10/miniconda3/envs/mlip-lab run -n mlip-lab pytest
+                # Run pytest
                 pytest
 
-                echo 'pytest not runned'
+                echo 'pytest run completed'
                 exit 1 #comment this line after implementing Jenkinsfile
                 '''
-
             }
         }
         stage('Deploy') {
             steps {
-                echo 'In this step, we deploy our porject'
+                echo 'In this step, we deploy our project'
                 echo 'Depending on the context, we may publish the project artifact or upload pickle files'
             }
         }
