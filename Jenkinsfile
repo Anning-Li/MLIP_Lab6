@@ -16,7 +16,8 @@ pipeline {
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # Initialize conda in a non-interactive shell
-                source /home/team10/miniconda3/bin/activate mlip-lab
+                ls
+                sudo source /home/team10/miniconda3/bin/activate mlip-lab
 
                 # Activate the conda environment
                 # conda activate mlip-lab
