@@ -16,10 +16,10 @@ pipeline {
                 echo 'Test Step: We run testing tool like pytest here'
 
                 # Initialize conda in a non-interactive shell
-                eval "$(/home/team10/miniconda3/bin/conda shell.bash hook)"
+                source /home/team10/miniconda3/bin/activate mlip-lab
 
                 # Activate the conda environment
-                conda activate mlip-lab
+                # conda activate mlip-lab
 
                 # Run pytest
                 pytest
