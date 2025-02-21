@@ -17,10 +17,10 @@ pipeline {
 
                 # Initialize conda in a non-interactive shell
                 ls
-                sudo source /home/team10/miniconda3/bin/activate mlip-lab
+                # sudo source /home/team10/miniconda3/bin/activate mlip-lab
 
                 # Activate the conda environment
-                # conda activate mlip-lab
+                conda activate mlip-lab
 
                 # Run pytest
                 pytest
