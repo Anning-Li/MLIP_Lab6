@@ -18,7 +18,7 @@ pipeline {
                 # TODO fill out the path to conda here
                 # sudo /PATH/TO/CONDA init
                 # sudo /home/team10/miniconda3/envs/mlip-lab init
-                source /home/team10/miniconda3/etc/profile.d/conda.sh 
+                sudo source /home/team10/miniconda3/etc/profile.d/conda.sh 
                 conda activate mlip-lab
 
                 # TODO Complete the command to run pytest
